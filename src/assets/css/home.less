@@ -1,0 +1,48 @@
+.indexContainer {
+  overflow-x: hidden;
+  padding-bottom: 125px;
+  .indexHeader {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 4.3vw 16px;
+    position: fixed;
+    width: 100%;
+    background-color: #f5f5f5;
+  }
+
+  .indexBody {
+    padding-top: 150px;
+    .indexTop {
+      margin: 32px;
+      font-size: 32px;
+      .desc {
+      }
+    }
+    .swiper {
+      margin: 16px 32px;
+      width: calc(100vw - 64px);
+      .swiperItem {
+        height: 175px;
+      }
+      .customIndicator {
+        display: flex;
+        justify-content: center;
+        border-radius: 4px;
+      }
+      .indicator {
+        width: 40px;
+        height: 8px;
+        background-color: #fff;
+      }
+      .activeIndicator {
+        border-radius: 4px;
+        background-color: rgb(255, 88, 20);
+      }
+    }
+    .banner {
+      border-radius: 20px;
+    }
+  }
+}
