@@ -1,4 +1,5 @@
-import { PullToRefresh, Image, Swiper, Toast } from "antd-mobile";
+import { PullToRefresh, Button, Swiper, Toast } from "antd-mobile";
+import { useNavigate } from "react-router-dom";
 import styles from "@/assets/css/home.less";
 const colors = ["#ace0ff", "#bcffbd", "#e4fabd", "#ffcfac"];
 
@@ -15,8 +16,9 @@ const items = colors.map((color, index) => (
     </div>
   </Swiper.Item>
 ));
-
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.indexContainer}>
       <div className={styles.indexHeader}>首页Header</div>
@@ -31,6 +33,19 @@ const Home = () => {
               {"一个基于umi4 antd mobile5 的react移动端脚手架;"}
             </div>
             <div className={styles.desc}>{"含dva,mock,多环境配置等;"}</div>
+            <Button
+              block
+              className={styles.btn}
+              style={{
+                "--border-radius": "100px",
+              }}
+              size="large"
+              onClick={() => {
+                navigate("/login");
+              }}
+            >
+              登录
+            </Button>
           </div>
           <Swiper
             className={styles.swiper}
