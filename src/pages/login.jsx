@@ -11,7 +11,13 @@ export default function LoginPage() {
   const navigate = useNavigate();
   return (
     <>
-      <NavBar back="返回" onBack={() => navigate(-1)}>
+      <NavBar
+        back="返回"
+        style={{
+          "--height": "64px",
+        }}
+        onBack={() => navigate(-1)}
+      >
         标题
       </NavBar>
       <div className={styles.loginContainer}>
